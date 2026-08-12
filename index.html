@@ -1,0 +1,18 @@
+<div style="background:#fff; border:1px dashed #ff8fa3; padding:16px; border-radius:16px; text-align:left;">
+  <p id="typewriterText" style="font-size:14px; color:#444; line-height:1.5; font-family:monospace; min-height:60px;"></p>
+  <button onclick="startTypewriter()" style="background:#ff4769; color:#fff; border:none; padding:6px 14px; border-radius:12px; font-weight:bold; cursor:pointer; margin-top:8px;">Read Letter ✍️</button>
+</div>
+
+<script>
+  const letterStr = "My darling, every single moment with you feels like a beautiful dream come true... 💕";
+  let twIdx = 0;
+  function startTypewriter() {
+    twIdx = 0;
+    document.getElementById('typewriterText').innerText = "";
+    const twInterval = setInterval(() => {
+      document.getElementById('typewriterText').innerText += letterStr.charAt(twIdx);
+      twIdx++;
+      if(twIdx >= letterStr.length) clearInterval(twInterval);
+    }, 50);
+  }
+</script>
