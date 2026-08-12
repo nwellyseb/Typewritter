@@ -1,2 +1,2 @@
-# Typewritter
+# Typewriter
 An animated typewriter letter
